@@ -1,0 +1,42 @@
+[package]
+name = "asana-replicator-public"
+version = "0.1.0"
+authors = ["Michael de Silva <michael@cyberdynea.io>"]
+repository = "https://github.com/bsodmike/asana-replicator-public-rs"
+license = "MIT OR Apache-2.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+axum = { version = "0.6.18", features = ["headers", "tower-log", "multipart"] }
+axum-extra = "0.1.2"
+hyper = { version = "0.14.26", features = ["full"] }
+hyper-rustls = { version = "0.24.0", features = ["http1", "http2"] }
+tokio = {version = "^1.0", features = ["full", "tracing"]}
+
+# Logging support
+tracing = "0.1.30"
+tracing-subscriber = { version = "0.3.8", features = ["env-filter"] }
+
+# Axum builds on the types in Tower
+tower = { version = "0.4.13", features = ["limit", "load-shed", "filter", "util"] }
+tower-http = { version = "0.4.0", features = ["trace", "cors", "catch-panic"] }
+
+# Utility crates
+async-trait = "^0.1"
+color-eyre = "0.6.3"
+dotenv = "^0.15"
+exponential-backoff = "^1.0"
+futures = "^0.3"
+log = "0.4.16"
+mongodb =  { version = "3.1.0", features = ["rustls-tls"] }
+reqwest = { version = "0.12", features = ["json"] }
+rustls-native-certs = "^0.7"
+regex = "1.11.0"
+serde = {version = "^1.0", features = ["derive"]}
+serde_json = "^1.0"
+uuid = {version = "0.8.2", features = ["serde", "v4"]}
+
+[profile.release]
+lto = "thin"
+opt-level = 3
