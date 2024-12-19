@@ -9,7 +9,7 @@ async fn main() -> color_eyre::Result<()> {
     if std::env::var_os("RUST_LOG").is_none() {
         std::env::set_var(
             "RUST_LOG",
-            "asana_replicator=info,tower_http=trace,tokio=trace,runtime=trace",
+            "asana_replicator_public=info,tower_http=trace,tokio=trace,runtime=trace",
         )
     }
     tracing_subscriber::fmt()

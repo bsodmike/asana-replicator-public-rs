@@ -1,5 +1,10 @@
 # asana-replicator-public-rs
 
+## TODO:
+
+- [ ] Move the `bin/create_webhook` example into an integration test with tear-down functionality as well.
+- [ ] Add test driving utility code into its own module.
+
 ## Get started
 
 Build as follows:
@@ -12,6 +17,8 @@ cargo r --bin create_webhook
 ```
 
 ## Creating a Webhook
+
+Example response:
 
 ```
 [src/asana.rs:213:9] &url = "https://app.asana.com/api/1.0/webhooks?resource=REDACTED&target=https://REDACTED.ngrok-free.app/receive-webhook/2&"
