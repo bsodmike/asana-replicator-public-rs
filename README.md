@@ -1,5 +1,9 @@
 # asana-replicator-public-rs
 
+This is a quick POC code-base, shared to illustrate my experience with Axum. Many rough edges included due to being a speed run.
+
+Refer to https://github.com/bsodmike/rv8803-rs for a professional example of my work, albeit on an embedded context.
+
 ## TODO:
 
 - [ ] Move the `bin/create_webhook` example into an integration test with tear-down functionality as well.
@@ -47,3 +51,16 @@ Example response:
 }
 ```
 
+## Minimum supported Rust version (MSRV)
+
+This project is tested against rust `beta`.
+
+## License
+
+Licensed under either of [Apache License Version 2.0](./LICENSE-APACHE) or [The MIT License](./LICENSE-MIT) at your option.
+
+🦀 ノ( º \_ º ノ) - respect crables!
+
+## Copyright
+
+Copyright © 2024, [Michael de Silva](mailto:michael@cyberdynea.io)
